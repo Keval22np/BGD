@@ -14,11 +14,36 @@ header {
     background-color: #fff;
     color: #333;
     padding: 1rem 0;
-    text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center header content horizontally */
 }
 
-nav { /* This is now mostly for general nav container styling */
+.header-content {
+    display: flex;
+    align-items: center;
+    max-width: 960px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.logo {
+    margin-right: 20px;
+    display: block;
+}
+
+    .logo img {
+        max-height: 50px;
+        display: block;
+    }
+
+header h1,
+header p {
+    text-align: left; /* Align text to the left */
+}
+
+nav {
     background-color: #333;
     padding: 1rem 0;
     text-align: center;
@@ -28,68 +53,69 @@ nav { /* This is now mostly for general nav container styling */
     z-index: 100;
 }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-}
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+    }
 
-nav li {
-    display: inline-block;
-    position: relative;
-}
+    nav li {
+        display: inline-block;
+        position: relative;
+    }
 
-nav a {
-    display: block;
-    padding: 0.8rem 1.5rem;
-    text-decoration: none;
-    color: #fff;
-    font-weight: 500;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    border-radius: 5px;
-    margin: 0 0.5rem;
-}
+    nav a {
+        display: block;
+        padding: 0.8rem 1.5rem;
+        text-decoration: none;
+        color: #fff;
+        font-weight: 500;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        border-radius: 5px;
+        margin: 0 0.5rem;
+        white-space: nowrap; /* Prevent menu items from wrapping */
+    }
 
-nav a:hover {
-    background-color: #555;
-    color: #eee;
-}
+        nav a:hover {
+            background-color: #555;
+            color: #eee;
+        }
 
-nav a.active {
-    background-color: #007bff;
-    color: white;
-}
+        nav a.active {
+            background-color: #007bff;
+            color: white;
+        }
 
-nav ul ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #333;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    min-width: 150px;
-    z-index: 101;
-}
+    nav ul ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #333;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        min-width: 150px;
+        z-index: 101;
+    }
 
-nav li:hover > ul {
-    display: block;
-}
+    nav li:hover > ul {
+        display: block;
+    }
 
-nav ul ul li {
-    display: block;
-    border-bottom: 1px solid #444;
-}
+    nav ul ul li {
+        display: block;
+        border-bottom: 1px solid #444;
+    }
 
-nav ul ul li:last-child {
-    border-bottom: none;
-}
+        nav ul ul li:last-child {
+            border-bottom: none;
+        }
 
-nav ul ul a {
-    padding: 0.5rem 1rem;
-    white-space: nowrap;
-}
+    nav ul ul a {
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+    }
 
 main {
     padding: 2rem;
@@ -124,6 +150,6 @@ footer {
     box-sizing: border-box;
 }
 
-.card h2 {
-    margin-top: 0;
-}
+    .card h2 {
+        margin-top: 0;
+    }

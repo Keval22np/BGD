@@ -8,8 +8,13 @@
 </head>
 <body>
     <header>
-        <h1>Balaji Group Developers</h1>
-        <p>About Us</p>
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Balaji Group Developers Logo">
+            </a>
+            <h1>Balaji Group Developers</h1>
+            <p>About Us</p>
+        </div>
     </header>
 
     <div id="menu-container"></div>
@@ -17,8 +22,8 @@
     <main>
         <div class="content-section">
             <div class="card">
-                <h2>About Content</h2> 
-                <p>Learn more about our company.</p> 
+                <h2>About Content</h2>
+                <p>Learn more about our company.</p>
             </div>
         </div>
     </main>
@@ -27,7 +32,7 @@
         <p> 2025 Balaji Group Developers</p>
     </footer>
     <script>
-        document.addEventListener('DOMContentLoaded', function() { // Wait for DOM
+        document.addEventListener('DOMContentLoaded', function () { // Wait for DOM
             fetch('menu.html')
                 .then(response => response.text())
                 .then(data => {
