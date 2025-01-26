@@ -17,13 +17,13 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
-    justify-content: center; /* Center header content horizontally */
+    justify-content: center;
 }
 
 .header-content {
     display: flex;
     align-items: center;
-    max-width: 960px;
+    max-width: 1200px;
     width: 90%;
     margin: 0 auto;
 }
@@ -34,13 +34,13 @@ header {
 }
 
     .logo img {
-        max-height: 50px;
+        max-height: 120px;
         display: block;
     }
 
-header h1,
-header p {
-    text-align: left; /* Align text to the left */
+header h1 {
+    font-size: 2em;
+    margin-bottom: 0;
 }
 
 nav {
@@ -74,7 +74,7 @@ nav {
         transition: background-color 0.3s ease, color 0.3s ease;
         border-radius: 5px;
         margin: 0 0.5rem;
-        white-space: nowrap; /* Prevent menu items from wrapping */
+        white-space: nowrap;
     }
 
         nav a:hover {
@@ -115,6 +115,19 @@ nav {
     nav ul ul a {
         padding: 0.5rem 1rem;
         white-space: nowrap;
+    }
+
+.header-paragraph {
+    background-color: #eee;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+    .header-paragraph p {
+        font-size: 1.2em;
+        max-width: 960px;
+        margin: 0 auto;
+        width: 90%;
     }
 
 main {

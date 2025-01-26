@@ -3,21 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Balaji Group Developers - Home</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
         <div class="header-content">
-            <a href="index.html" class="logo">
-                <img src="/images/logo.png" alt="Balaji Group Developers Logo">
+            <a href="/index.html" class="logo">
+                <img src="images/logo.png" alt="Balaji Group Developers Logo">
             </a>
             <h1>Balaji Group Developers</h1>
-            <p>Welcome to the Home Page</p>
         </div>
     </header>
 
-    <div id="menu-container"></div> 
+    <nav id="menu-container"></nav>
+
+    <div class="header-paragraph">
+        <p>Welcome to the Home Page</p>
+    </div>
 
     <main>
         <div class="content-section">
@@ -29,16 +32,16 @@
     </main>
 
     <footer>
-        <p> 2025 Balaji Group Developers</p>
+        <p>&copy; 2023 Balaji Group Developers. All rights reserved.</p>
     </footer>
+
     <script>
-        document.addEventListener('DOMContentLoaded', function() { // Wait for DOM
-            fetch('menu.html')
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('/menu.html')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('menu-container').innerHTML = data;
 
-                    // Set active class - improved
                     const path = window.location.pathname;
                     const page = path.split("/").pop();
                     const navLinks = document.querySelectorAll('nav a');
