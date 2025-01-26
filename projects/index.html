@@ -32,7 +32,7 @@
     </footer>
     <script>
         document.addEventListener('DOMContentLoaded', function() { // Wait for DOM
-            fetch('menu.html')
+            fetch('../menu.html')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('menu-container').innerHTML = data;

@@ -17,8 +17,8 @@
     <main>
         <div class="content-section">
             <div class="card">
-                <h2>USA Project Details</h2> <--- Change this line for each page
-                <p>Information about our projects in the USA.</p> <--- Change this line for each page
+                <h2>USA Project Details</h2> 
+                <p>Information about our projects in the USA.</p> 
             </div>
         </div>
     </main>
@@ -28,7 +28,7 @@
     </footer>
     <script>
         document.addEventListener('DOMContentLoaded', function() { // Wait for DOM
-            fetch('menu.html')
+            fetch('../menu.html')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('menu-container').innerHTML = data;
