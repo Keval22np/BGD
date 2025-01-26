@@ -1,0 +1,129 @@
+﻿body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #fff;
+    color: #333;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav { /* This is now mostly for general nav container styling */
+    background-color: #333;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+nav li {
+    display: inline-block;
+    position: relative;
+}
+
+nav a {
+    display: block;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+    margin: 0 0.5rem;
+}
+
+nav a:hover {
+    background-color: #555;
+    color: #eee;
+}
+
+nav a.active {
+    background-color: #007bff;
+    color: white;
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    min-width: 150px;
+    z-index: 101;
+}
+
+nav li:hover > ul {
+    display: block;
+}
+
+nav ul ul li {
+    display: block;
+    border-bottom: 1px solid #444;
+}
+
+nav ul ul li:last-child {
+    border-bottom: none;
+}
+
+nav ul ul a {
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+}
+
+main {
+    padding: 2rem;
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.content-section {
+    width: 80%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    padding: 1.5rem;
+    flex: 1 0 300px;
+    box-sizing: border-box;
+}
+
+.card h2 {
+    margin-top: 0;
+}
