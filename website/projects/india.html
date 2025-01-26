@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India Projects</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Balaji Group Developers</h1>
+        <p>USA Projects</p> 
+    </header>
+
+    <div id="menu-container"></div> 
+
+    <main>
+        <div class="content-section">
+            <div class="card">
+                <h2>USA Project Details</h2> <--- Change this line for each page
+                <p>Information about our projects in the USA.</p> <--- Change this line for each page
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p> 2025 Balaji Group Developers</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() { // Wait for DOM
+            fetch('menu.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('menu-container').innerHTML = data;
+
+                    // Set active class - improved
+                    const path = window.location.pathname;
+                    const page = path.split("/").pop();
+                    const navLinks = document.querySelectorAll('nav a');
+                    navLinks.forEach(link => {
+                        if (link.href.endsWith(page)) {
+                            link.classList.add('active');
+                        }
+                    });
+                });
+        });
+    </script>
+</body>
+</html>
