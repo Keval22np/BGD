@@ -78,8 +78,8 @@ nav {
     }
 
         nav a:hover {
-            background-color: #aaa;
-            color: #eee;
+            background-color: rgba(0, 0, 0, 0.2);
+            color: #fff;
         }
 
         nav a.active {
