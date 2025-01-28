@@ -5,41 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Balaji Group Developers - Home</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="header-content">
-            <div class="logo-and-title">
-                
-                <h1>
-                    <a href="/index.html" class="logo">
-                        <img src="images/logo.png" alt="Balaji Group Developers Logo">
-                    </a>
-                </h1>
+            <div class="logo">
+                <a href="/index.html" class="logo">
+                    <img src="images/logo.png" alt="Balaji Group Developers Logo">
+                </a>
             </div>
+            <nav id="menu-container"></nav>
         </div>
-        <div id="menu-container"></div>
     </header>
 
     <div class="header-paragraph">
         <p>Welcome to the Home Page</p>
     </div>
 
+    <section class="slider">
+        <div class="slider-container">
+            <div class="slider-inner">
+            </div>
+        </div>
+        <div class="slider-controls">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+    </section>
+
     <main>
         <div class="content-section">
             <div class="card">
-                <h2>Home Content</h2>
-                <p>This is the content of the home page.</p>
+                <h2>Experience Elevated Living</h2>
+                <p>Balaji Group Developers is a leading real estate developer dedicated to creating exceptional living and working spaces. We are committed to quality, innovation, and customer satisfaction.</p>
+            </div>
+            <div class="card">
+                <h2>Our Vision</h2>
+                <p>To be a recognized leader in the real estate industry, known for our innovative designs, exceptional quality, and unwavering commitment to customer satisfaction.</p>
             </div>
         </div>
     </main>
 
     <footer>
-        <p> 2025 Balaji Group Developers</p>
+        <p>2025 Balaji Group Developers</p>
     </footer>
 
+    <script src="js/slider.js"></script>
+
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             fetch('/menu.html')
                 .then(response => response.text())
                 .then(data => {
